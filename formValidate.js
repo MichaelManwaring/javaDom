@@ -86,7 +86,42 @@ $("form").submit(function(){
 	console.log(day);
 	console.log(year);
 	console.log(date);
- })
+
+	var correctPass = "12345";
+	var guessPass = $("#password").val();
+
+
+	// Testing if username is blank
+
+	var name = $("#username").val();
+
+	if (name != "") {
+		console.log("username valid");
+
+		// will nest password checking if statement inside name if statement.
+		if (guessPass === correctPass) {
+			console.log("correct password");
+
+		}else {
+			alert("Incorrect Password");
+		}
+
+
+	} else {
+		alert("username cannot be blank!");
+	}
+	
+	// Password checker works. Will nest this inside username blank if statement.
+	// if (guessPass === correctPass) {
+	// 	console.log("correct password");
+	// }else {
+	// 	alert("Incorrect Password");
+	// }
+
+
+
+ });
+
 });
 
 
